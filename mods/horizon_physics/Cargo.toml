@@ -1,0 +1,13 @@
+[package]
+name = "mod-horizon_physics"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Clean-room high-performance voxel rigid-body & sub-grid physics mod for Horizon 26.3"
+
+[dependencies]
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
+horizon_physics_core = { path = "crates/horizon_physics_core" }
+
+[dev-dependencies]
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api", features = ["testing"] }

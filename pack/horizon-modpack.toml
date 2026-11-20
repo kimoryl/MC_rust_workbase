@@ -1,0 +1,41 @@
+format = 1
+id = "mc_rust_workbase"
+name = "MC Rust Workbase"
+version = "0.1.0"
+description = "基于 Horizon（Minecraft: Java Edition 26.3 Rust 原生实现）的开源双许可整合包工程，集成 Clean-Room 刚体子网格物理引擎 horizon_physics 与核心内容脚手架 workbase_core。"
+authors = ["Antigravity"]
+game = "26.3"
+
+# ==============================================================================
+# Mod 列表清单（[[mods]]）
+# ==============================================================================
+# 1. 在首次构建生成 `dist/*.hmod` 产物之前，此处保持规范注释占位，避免未计算真实
+#    SHA-256 哈希时导致 `cargo horizon-mod check` 或合规门禁报错。
+# 2. 运行 `.\scripts\build_pack.ps1 -UpdateManifest` 可在构建并通过 `cargo horizon-mod check`
+#    校验后，自动计算 `workbase_core` 与 `horizon_physics` 的 64 位小写十六进制 SHA-256，
+#    并按下方规范格式回填至本清单后重新打包 `dist/mc_rust_workbase-0.1.0.hpack`。
+# 3. `pack/overrides/` 目录下的配置与资源文件会被自动打入 `.hpack`（自动忽略 `.gitkeep`）。
+#
+# [[mods]]
+# id = "workbase_core"
+# version = "0.1.0"
+# sha256 = "<构建 workbase_core.hmod 后由 build_pack.ps1 自动回填的64位小写SHA-256>"
+# on = true
+#
+# [[mods]]
+# id = "horizon_physics"
+# version = "0.1.0"
+# sha256 = "<构建 horizon_physics.hmod 后由 build_pack.ps1 自动回填的64位小写SHA-256>"
+# on = true
+
+[[mods]]
+id = "workbase_core"
+version = "0.1.0"
+sha256 = "90734fd65bc462714ccd4650882891890d8c06768744f8051878662914b70e98"
+on = true
+
+[[mods]]
+id = "horizon_physics"
+version = "0.1.0"
+sha256 = "ae18c6303333abbf2edfac3c91536b20d7edfcabcb5f6127f348c86baaf725d0"
+on = true

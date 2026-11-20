@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "default_material": {
+    "density": 2200.0,
+    "friction": 0.60,
+    "restitution": 0.10,
+    "linear_drag": 0.02,
+    "angular_drag": 0.05
+  },
+  "blocks": {
+    "minecraft:stone": {
+      "density": 2500.0,
+      "friction": 0.65,
+      "restitution": 0.10,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:cobblestone": {
+      "density": 2400.0,
+      "friction": 0.70,
+      "restitution": 0.08,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:deepslate": {
+      "density": 2900.0,
+      "friction": 0.68,
+      "restitution": 0.08,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:obsidian": {
+      "density": 3200.0,
+      "friction": 0.55,
+      "restitution": 0.12,
+      "linear_drag": 0.015,
+      "angular_drag": 0.04
+    },
+    "minecraft:bedrock": {
+      "density": 50000.0,
+      "friction": 0.80,
+      "restitution": 0.05,
+      "linear_drag": 0.01,
+      "angular_drag": 0.02
+    },
+    "minecraft:oak_planks": {
+      "density": 600.0,
+      "friction": 0.55,
+      "restitution": 0.15,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:spruce_planks": {
+      "density": 540.0,
+      "friction": 0.55,
+      "restitution": 0.15,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:birch_planks": {
+      "density": 620.0,
+      "friction": 0.54,
+      "restitution": 0.15,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:dark_oak_planks": {
+      "density": 700.0,
+      "friction": 0.58,
+      "restitution": 0.14,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:oak_log": {
+      "density": 680.0,
+      "friction": 0.62,
+      "restitution": 0.12,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:iron_block": {
+      "density": 7850.0,
+      "friction": 0.45,
+      "restitution": 0.20,
+      "linear_drag": 0.01,
+      "angular_drag": 0.03
+    },
+    "minecraft:copper_block": {
+      "density": 8960.0,
+      "friction": 0.48,
+      "restitution": 0.18,
+      "linear_drag": 0.01,
+      "angular_drag": 0.03
+    },
+    "minecraft:gold_block": {
+      "density": 19300.0,
+      "friction": 0.42,
+      "restitution": 0.16,
+      "linear_drag": 0.01,
+      "angular_drag": 0.03
+    },
+    "minecraft:netherite_block": {
+      "density": 21000.0,
+      "friction": 0.50,
+      "restitution": 0.15,
+      "linear_drag": 0.01,
+      "angular_drag": 0.03
+    },
+    "minecraft:slime_block": {
+      "density": 1100.0,
+      "friction": 0.80,
+      "restitution": 0.85,
+      "linear_drag": 0.03,
+      "angular_drag": 0.06
+    },
+    "minecraft:honey_block": {
+      "density": 1400.0,
+      "friction": 0.95,
+      "restitution": 0.05,
+      "linear_drag": 0.05,
+      "angular_drag": 0.08
+    },
+    "minecraft:ice": {
+      "density": 917.0,
+      "friction": 0.04,
+      "restitution": 0.08,
+      "linear_drag": 0.005,
+      "angular_drag": 0.02
+    },
+    "minecraft:packed_ice": {
+      "density": 920.0,
+      "friction": 0.02,
+      "restitution": 0.08,
+      "linear_drag": 0.005,
+      "angular_drag": 0.02
+    },
+    "minecraft:blue_ice": {
+      "density": 930.0,
+      "friction": 0.01,
+      "restitution": 0.08,
+      "linear_drag": 0.004,
+      "angular_drag": 0.018
+    },
+    "minecraft:white_wool": {
+      "density": 250.0,
+      "friction": 0.85,
+      "restitution": 0.05,
+      "linear_drag": 0.05,
+      "angular_drag": 0.08
+    },
+    "minecraft:sponge": {
+      "density": 180.0,
+      "friction": 0.78,
+      "restitution": 0.08,
+      "linear_drag": 0.06,
+      "angular_drag": 0.09
+    },
+    "minecraft:hay_block": {
+      "density": 320.0,
+      "friction": 0.72,
+      "restitution": 0.10,
+      "linear_drag": 0.04,
+      "angular_drag": 0.07
+    },
+    "minecraft:glass": {
+      "density": 2500.0,
+      "friction": 0.40,
+      "restitution": 0.15,
+      "linear_drag": 0.015,
+      "angular_drag": 0.04
+    },
+    "minecraft:sandstone": {
+      "density": 2300.0,
+      "friction": 0.66,
+      "restitution": 0.08,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:bricks": {
+      "density": 1920.0,
+      "friction": 0.68,
+      "restitution": 0.09,
+      "linear_drag": 0.02,
+      "angular_drag": 0.05
+    },
+    "minecraft:dirt": {
+      "density": 1450.0,
+      "friction": 0.75,
+      "restitution": 0.04,
+      "linear_drag": 0.03,
+      "angular_drag": 0.06
+    },
+    "minecraft:grass_block": {
+      "density": 1450.0,
+      "friction": 0.72,
+      "restitution": 0.05,
+      "linear_drag": 0.03,
+      "angular_drag": 0.06
+    },
+    "minecraft:sand": {
+      "density": 1600.0,
+      "friction": 0.64,
+      "restitution": 0.03,
+      "linear_drag": 0.03,
+      "angular_drag": 0.06
+    },
+    "minecraft:gravel": {
+      "density": 1750.0,
+      "friction": 0.66,
+      "restitution": 0.04,
+      "linear_drag": 0.03,
+      "angular_drag": 0.06
+    },
+    "minecraft:tnt": {
+      "density": 1650.0,
+      "friction": 0.60,
+      "restitution": 0.10,
+      "linear_drag": 0.025,
+      "angular_drag": 0.05
+    }
+  },
+  "fluids": {
+    "minecraft:water": {
+      "density": 1000.0,
+      "linear_drag": 2.5,
+      "angular_drag": 3.0
+    },
+    "minecraft:lava": {
+      "density": 3100.0,
+      "linear_drag": 8.0,
+      "angular_drag": 10.0
+    }
+  }
+}

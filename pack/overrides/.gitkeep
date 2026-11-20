@@ -1,0 +1,7 @@
+# 保留 overrides 目录结构；scripts/build-pack.ps1 打包 .hpack 时会自动排除本文件。
+# Horizon .hpack 仅允许在 overrides/ 中放置：
+# - options.txt
+# - horizon-graphics.txt
+# - horizon-extras.txt
+# - resourcepacks/<name>.zip
+# - horizon-mods/.horizon-mod-data/<listed_mod_id>/...

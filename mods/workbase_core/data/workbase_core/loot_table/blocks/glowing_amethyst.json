@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": { "type": "minecraft:survives_explosion" },
+      "entries": [{ "type": "minecraft:item", "name": "workbase_core:glowing_amethyst" }],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "workbase_core:blocks/glowing_amethyst"
+}

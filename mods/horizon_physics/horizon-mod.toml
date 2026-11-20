@@ -1,0 +1,14 @@
+id = "horizon_physics"
+name = "Horizon Physics"
+version = "0.1.0"
+description = "Clean-room high-performance voxel rigid-body and sub-grid physics engine mod for Horizon 26.3"
+authors = ["Horizon Physics Contributors"]
+license = "MIT OR Apache-2.0"
+api = "0.2"
+side = "both"
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "f00125f61f794aaa3d4e950d301f353b35b6ee3d"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"

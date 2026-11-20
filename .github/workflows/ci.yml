@@ -1,0 +1,60 @@
+name: Clean-Room Compliance & Physics Core CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  compliance-audit:
+    name: Red-Team Clean-Room Compliance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust stable toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Check root crate formatting
+        run: cargo fmt --all -- --check
+
+      - name: Run root static compliance audit (STRICT_FULL_AUDIT=1)
+        env:
+          STRICT_FULL_AUDIT: "1"
+        run: cargo test --test redteam_compliance
+
+  physics-core:
+    name: Pure-Rust Physics Core (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: mods/horizon_physics/crates/horizon_physics_core
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust stable toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+
+      - name: Run clippy with warnings denied
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Run unit tests and throughput benchmarks (release)
+        run: cargo test --release

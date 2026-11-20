@@ -1,0 +1,31 @@
+# MC_rust_workbase 根级静态合规与红队门禁包
+#
+# 架构编排说明（为何不在根目录强行声明包含原生 Mod 的 [workspace].members）：
+# 1. `mods/horizon_physics` 属于 Horizon 原生 Mod，其依赖指向由 `cargo horizon-mod` 按需拉取的
+#    本地 `.horizon/sdk/` 目录；在离网环境或尚未同步 SDK 的 CI 节点上，若将其硬编码进根目录
+#    `[workspace].members`，会导致 `cargo metadata` 与根级合规测试提前失败。
+# 2. `mods/horizon_physics/crates/horizon_physics_core` 是零外部依赖的纯 Rust 物理内核，必须保持
+#    独立、无 `.workspace = true` 继承，以支持在无 SDK 环境下独立编译、单测与基准测试。
+# 3. 因此根目录仅作为独立的零依赖合规审计包运行 `tests/redteam_compliance.rs`；全仓构建、测试
+#    与打包编排统一由 `scripts/build_pack.ps1` 与 `scripts/verify_redteam.ps1` 分阶段校验：
+#    - 阶段 A：根级静态合规测试（`cargo test --test redteam_compliance`）
+#    - 阶段 B：物理内核单元测试与 Release 基准（`mods/horizon_physics/crates/horizon_physics_core`）
+#    - 阶段 C：原生桥接 Mod 集成测试与 `.hmod` 校验（`mods/horizon_physics`）
+#    - 阶段 D：内容 Mod（`mods/workbase_core`）与整合包 `.hpack` 打包校验
+
+[package]
+name = "mc_rust_workbase_compliance"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+description = "Clean-room static compliance and red-team verification suite for MC_rust_workbase."
+autobins = false
+autolib = false
+autoexamples = false
+autobenches = false
+autotests = false
+
+[[test]]
+name = "redteam_compliance"
+path = "tests/redteam_compliance.rs"
