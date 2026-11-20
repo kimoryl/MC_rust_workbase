@@ -1455,10 +1455,10 @@ fn test_14_arena_broadphase_math_edge_cases_and_despawn() {
     );
     let inv = invertible.try_inverse().expect("invertible 3x3");
     let prod = invertible * inv;
-    for col in 0..3 {
-        for row in 0..3 {
+    for (col, col_vec) in prod.cols.iter().enumerate() {
+        for (row, val) in [col_vec.x, col_vec.y, col_vec.z].into_iter().enumerate() {
             let expected = if col == row { 1.0 } else { 0.0 };
-            assert!((prod.cols[col][row] - expected).abs() < 1e-12);
+            assert!((val - expected).abs() < 1e-12);
         }
     }
     let u = Vec3d::new(1.5, -2.0, 3.25);
